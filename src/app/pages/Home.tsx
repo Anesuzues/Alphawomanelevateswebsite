@@ -5,10 +5,10 @@ import { Textarea } from '@/app/components/ui/textarea';
 import { Label } from '@/app/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { toast } from 'sonner';
-import heroImage from 'alpha 4.jpeg';
-import cardsImage from 'alpha1.jpeg';
-import founderImage from 'alpha2.jpeg';
-import empowermentImage from 'alpha3.jpeg';
+import heroImage from "../../assets/alpha4.jpeg";
+import cardsImage from  "../../assets/alpha1.jpeg";
+import founderImage from  "../../assets/alpha2.jpeg";
+import empowermentImage from  "../../assets/alpha3.jpeg";
 
 export function Home() {
   const [formData, setFormData] = useState({
