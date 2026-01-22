@@ -14,19 +14,49 @@ export function Home() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    message: ''
+    whatsapp: '',
+    business: '',
+    reason: '',
+    support: ''
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast.success('Thank you for reaching out! We will get back to you within 24 hours.');
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      message: ''
-    });
+    setIsSubmitting(true);
+    
+    try {
+      // Google Apps Script Web App URL
+      const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwKPZaZItUmir9Gcpd1eM_4evXTrJvY7b2L_M1m_QM-sthFCwYKO9O0-EeV_xiMNDiYmA/exec';
+      
+      const response = await fetch(SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      toast.success(`Success! 🎉 Thank you for submitting your information. You've been added to our waiting list! Check your email (${formData.email}) for a welcome message and next steps.`);
+      
+      // Clear form
+      setFormData({
+        name: '',
+        email: '',
+        whatsapp: '',
+        business: '',
+        reason: '',
+        support: ''
+      });
+      
+    } catch (error) {
+      console.error('Form submission error:', error);
+      toast.error('There was a problem submitting your form. Please try again or contact us directly.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -278,10 +308,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent mb-4">
-              Get In Touch
+              Join Our Community
             </h2>
             <p className="text-xl text-gray-600">
-              We'd love to hear from you. Let's start a conversation.
+              Take the first step towards transforming your life
             </p>
           </div>
 
@@ -296,20 +326,20 @@ export function Home() {
               <CardContent>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2">
-                    <Label htmlFor="name">Name *</Label>
+                    <Label htmlFor="name">Name & Surname *</Label>
                     <Input
                       id="name"
                       name="name"
                       value={formData.name}
                       onChange={handleChange}
-                      placeholder="Your full name"
+                      placeholder="Enter your full name"
                       required
                       className="border-purple-200 focus:border-purple-600"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="email">Email *</Label>
+                    <Label htmlFor="email">Email Address *</Label>
                     <Input
                       id="email"
                       name="email"
@@ -323,27 +353,59 @@ export function Home() {
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="phone">Phone</Label>
+                    <Label htmlFor="whatsapp">WhatsApp Number *</Label>
                     <Input
-                      id="phone"
-                      name="phone"
+                      id="whatsapp"
+                      name="whatsapp"
                       type="tel"
-                      value={formData.phone}
+                      value={formData.whatsapp}
                       onChange={handleChange}
-                      placeholder="(555) 123-4567"
+                      placeholder="+27 XX XXX XXXX"
+                      required
                       className="border-purple-200 focus:border-purple-600"
                     />
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="message">Message *</Label>
+                    <Label htmlFor="business">Business Information *</Label>
+                    <p className="text-sm text-gray-600 mb-2">Tell us about your business or professional background</p>
                     <Textarea
-                      id="message"
-                      name="message"
-                      value={formData.message}
+                      id="business"
+                      name="business"
+                      value={formData.business}
                       onChange={handleChange}
-                      placeholder="Tell us how we can help you..."
-                      rows={5}
+                      placeholder="Tell us about your business..."
+                      rows={4}
+                      required
+                      className="border-purple-200 focus:border-purple-600"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="reason">Reason for Interest in Joining Alpha Woman *</Label>
+                    <p className="text-sm text-gray-600 mb-2">What motivates you to join our community?</p>
+                    <Textarea
+                      id="reason"
+                      name="reason"
+                      value={formData.reason}
+                      onChange={handleChange}
+                      placeholder="What motivates you to join our community?"
+                      rows={4}
+                      required
+                      className="border-purple-200 focus:border-purple-600"
+                    />
+                  </div>
+                  
+                  <div className="space-y-2">
+                    <Label htmlFor="support">How Can Alpha Woman Support Your Growth? *</Label>
+                    <p className="text-sm text-gray-600 mb-2">What areas would you like support in?</p>
+                    <Textarea
+                      id="support"
+                      name="support"
+                      value={formData.support}
+                      onChange={handleChange}
+                      placeholder="What areas would you like support in?"
+                      rows={4}
                       required
                       className="border-purple-200 focus:border-purple-600"
                     />
@@ -351,9 +413,10 @@ export function Home() {
                   
                   <Button 
                     type="submit" 
-                    className="w-full bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 py-6 text-lg shadow-lg"
+                    disabled={isSubmitting}
+                    className="w-full bg-gradient-to-r from-purple-600 to-red-600 hover:from-purple-700 hover:to-red-700 py-6 text-lg shadow-lg disabled:opacity-60"
                   >
-                    Send Message
+                    {isSubmitting ? 'Submitting...' : 'Submit & Join the Waiting List'}
                   </Button>
                 </form>
               </CardContent>
