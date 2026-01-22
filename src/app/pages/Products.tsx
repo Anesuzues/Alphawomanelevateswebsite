@@ -21,14 +21,7 @@ export function Products() {
       features: ["Monthly networking events", "Private community forum", "Resource library access"],
       color: "red"
     },
-    {
-      id: 3,
-      title: "Online Courses",
-      description: "Self-paced courses covering personal development, career advancement, and life balance.",
-      icon: BookOpen,
-      features: ["Lifetime access", "Expert-led content", "Interactive exercises"],
-      color: "purple"
-    },
+
     {
       id: 4,
       title: "Coaching Sessions",

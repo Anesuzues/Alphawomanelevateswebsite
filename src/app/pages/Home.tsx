@@ -51,13 +51,7 @@ export function Home() {
       features: ["Monthly networking events", "Private community forum", "Resource library access"],
       color: "red"
     },
-    {
-      id: 3,
-      title: "Online Courses",
-      description: "Self-paced courses covering personal development, career advancement, and life balance.",
-      features: ["Lifetime access", "Expert-led content", "Interactive exercises"],
-      color: "purple"
-    },
+
     {
       id: 4,
       title: "Coaching Sessions",
@@ -109,7 +103,7 @@ export function Home() {
       {/* Image Gallery Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid md:grid-cols-3 gap-6">
             <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
               <img 
                 src={heroImage} 
@@ -133,13 +127,29 @@ export function Home() {
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
               />
             </div>
-            
-            <div className="group relative overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
+          </div>
+        </div>
+      </section>
+
+      {/* Dedicated Empowerment Section */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-red-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent mb-4">
+              Empowerment Awaits
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Your journey to transformation starts here
+            </p>
+          </div>
+          <div className="flex justify-center">
+            <div className="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-3 max-w-2xl">
               <img 
                 src={empowermentImage} 
                 alt="Empowerment Awaits - Alpha Women Elevates" 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
               />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
             </div>
           </div>
         </div>
@@ -160,6 +170,7 @@ export function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
             <div className="space-y-6">
               <h3 className="text-3xl md:text-4xl font-bold text-gray-900">Our Story</h3>
+              {/* TODO: Content to be confirmed once final messaging is agreed upon */}
               <p className="text-lg text-gray-700 leading-relaxed">
                 Alpha Woman Elevates was founded with a simple yet powerful mission: to create a space where women can grow, 
                 thrive, and reach their fullest potential. We understand the unique challenges that women face in both 
