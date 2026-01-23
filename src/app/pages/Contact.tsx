@@ -140,8 +140,8 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">info@alphawomanelevates.com</p>
-                      <p className="text-gray-600">support@alphawomanelevates.com</p>
+                      <p className="text-gray-600">heir.herbiz@gmail.com</p>
+                      <p className="text-gray-600">heir.herbiz@gmail.com</p>
                     </div>
                   </div>
                   
@@ -151,7 +151,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Phone</h3>
-                      <p className="text-gray-600">+1 (555) 123-4567</p>
+                      <p className="text-gray-600">+27 79 481 4664</p>
                       <p className="text-sm text-gray-500">Mon-Fri, 9am-5pm EST</p>
                     </div>
                   </div>
