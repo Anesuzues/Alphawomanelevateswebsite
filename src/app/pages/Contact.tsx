@@ -4,7 +4,7 @@ import { Input } from '@/app/components/ui/input';
 import { Textarea } from '@/app/components/ui/textarea';
 import { Label } from '@/app/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 import { toast } from 'sonner';
 
 export function Contact() {
@@ -140,8 +140,7 @@ export function Contact() {
                     </div>
                     <div>
                       <h3 className="font-semibold text-gray-900">Email</h3>
-                      <p className="text-gray-600">heir.herbiz@gmail.com</p>
-                      <p className="text-gray-600">heir.herbiz@gmail.com</p>
+                      <p className="text-gray-600">info@alphawomenelevates.co.za</p>
                     </div>
                   </div>
                   
@@ -153,18 +152,6 @@ export function Contact() {
                       <h3 className="font-semibold text-gray-900">Phone</h3>
                       <p className="text-gray-600">+27 79 481 4664</p>
                       <p className="text-sm text-gray-500">Mon-Fri, 9am-5pm EST</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-purple-100 p-3 rounded-full">
-                      <MapPin className="h-6 w-6 text-purple-600" />
-                    </div>
-                    <div>
-                      <h3 className="font-semibold text-gray-900">Office</h3>
-                      <p className="text-gray-600">123 Empowerment Avenue</p>
-                      <p className="text-gray-600">Suite 500</p>
-                      <p className="text-gray-600">New York, NY 10001</p>
                     </div>
                   </div>
                 </CardContent>
