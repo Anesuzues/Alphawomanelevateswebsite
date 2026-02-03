@@ -1,6 +1,7 @@
 import { Menu } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/app/components/ui/sheet';
+import logo from '../../assets/Alpha Women logo.png';
 
 export function Navigation() {
   const scrollToSection = (id: string) => {
@@ -16,9 +17,12 @@ export function Navigation() {
         <div className="flex justify-between items-center h-16">
           <button 
             onClick={() => scrollToSection('home')}
-            className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent hover:scale-105 transition-transform"
+            className="flex items-center gap-3 hover:scale-105 transition-transform"
           >
-            Alpha Woman Elevates
+            <img src={logo} alt="Alpha Woman Elevates Logo" className="h-10 w-10" />
+            <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent">
+              Alpha Woman Elevates
+            </span>
           </button>
           
           {/* Desktop Navigation */}

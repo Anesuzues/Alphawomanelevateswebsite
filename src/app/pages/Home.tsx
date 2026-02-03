@@ -68,20 +68,12 @@ export function Home() {
 
   const products = [
     {
-      id: 1,
-      title: "Leadership Masterclass",
-      description: "Comprehensive program designed to develop your leadership skills and executive presence.",
-      features: ["12-week intensive program", "One-on-one coaching", "Certificate of completion"],
-      color: "purple"
-    },
-    {
       id: 2,
       title: "Community Membership",
       description: "Join our exclusive community of empowered women and access ongoing support and resources.",
       features: ["Monthly networking events", "Private community forum", "Resource library access"],
       color: "red"
     },
-
     {
       id: 4,
       title: "Coaching Sessions",

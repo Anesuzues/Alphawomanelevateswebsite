@@ -1,18 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/app/components/ui/card';
 import { Button } from '@/app/components/ui/button';
-import { BookOpen, Users, Video, Star } from 'lucide-react';
+import { Users, Video } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export function Products() {
   const products = [
-    {
-      id: 1,
-      title: "Leadership Masterclass",
-      description: "Comprehensive program designed to develop your leadership skills and executive presence.",
-      icon: Star,
-      features: ["12-week intensive program", "One-on-one coaching", "Certificate of completion"],
-      color: "purple"
-    },
     {
       id: 2,
       title: "Community Membership",
@@ -21,7 +13,6 @@ export function Products() {
       features: ["Monthly networking events", "Private community forum", "Resource library access"],
       color: "red"
     },
-
     {
       id: 4,
       title: "Coaching Sessions",
