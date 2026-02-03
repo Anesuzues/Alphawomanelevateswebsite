@@ -19,7 +19,7 @@ export function Navigation() {
             onClick={() => scrollToSection('home')}
             className="flex items-center gap-3 hover:scale-105 transition-transform"
           >
-            <img src={logo} alt="Alpha Woman Elevates Logo" className="h-10 w-10" />
+            <img src={logo} alt="Alpha Woman Elevates Logo" className="h-16 w-16" />
             <span className="text-2xl font-bold bg-gradient-to-r from-purple-600 to-red-600 bg-clip-text text-transparent">
               Alpha Woman Elevates
             </span>
