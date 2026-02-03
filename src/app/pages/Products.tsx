@@ -29,7 +29,7 @@ export function Products() {
       <section className="bg-gradient-to-r from-purple-600 to-red-600 py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">
-            Our Products & Services
+            Our Programs & Services
           </h1>
           <p className="text-xl text-purple-100 max-w-3xl mx-auto">
             Discover our comprehensive range of programs and services designed to support your journey to excellence.
@@ -37,7 +37,7 @@ export function Products() {
         </div>
       </section>
 
-      {/* Products Grid */}
+      {/* Programs Grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-8">

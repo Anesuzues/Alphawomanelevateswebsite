@@ -29,7 +29,7 @@ export function Navigation() {
           <div className="hidden md:flex items-center space-x-8">
             <button onClick={() => scrollToSection('home')} className="hover:text-purple-600 transition-colors font-medium">Home</button>
             <button onClick={() => scrollToSection('about')} className="hover:text-purple-600 transition-colors font-medium">About</button>
-            <button onClick={() => scrollToSection('products')} className="hover:text-purple-600 transition-colors font-medium">Products</button>
+            <button onClick={() => scrollToSection('programs')} className="hover:text-purple-600 transition-colors font-medium">Programs</button>
             <button onClick={() => scrollToSection('contact')} className="hover:text-purple-600 transition-colors font-medium">Contact</button>
           </div>
 
@@ -49,7 +49,7 @@ export function Navigation() {
                 <div className="flex flex-col space-y-4 mt-8">
                   <button onClick={() => scrollToSection('home')} className="text-lg hover:text-purple-600 transition-colors text-left">Home</button>
                   <button onClick={() => scrollToSection('about')} className="text-lg hover:text-purple-600 transition-colors text-left">About</button>
-                  <button onClick={() => scrollToSection('products')} className="text-lg hover:text-purple-600 transition-colors text-left">Products</button>
+                  <button onClick={() => scrollToSection('programs')} className="text-lg hover:text-purple-600 transition-colors text-left">Programs</button>
                   <button onClick={() => scrollToSection('contact')} className="text-lg hover:text-purple-600 transition-colors text-left">Contact</button>
                 </div>
               </SheetContent>
