@@ -1,7 +1,7 @@
 import { Menu } from 'lucide-react';
 import { Button } from '@/app/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/app/components/ui/sheet';
-import logo from '../../assets/Alpha Women logo.png';
+import logo from '../../assets/Alpha Women Logo.jpeg';
 
 export function Navigation() {
   const scrollToSection = (id: string) => {
